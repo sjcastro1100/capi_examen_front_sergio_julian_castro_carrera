@@ -15,10 +15,12 @@ export class TablaUsuariosComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.users)
     this.getUsers()
   }
 
+  /**
+   * Obtiene la lista de usuarios 
+   */
   getUsers(){
     let data = this.api.getUsers().subscribe( res =>{
       let info:any = res;
